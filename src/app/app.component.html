@@ -1,0 +1,14 @@
+
+<div class="container"  *ngIf="isLogin()">
+  <h1 style="text-align: center;margin-top: 100px;"> Dashboard</h1>
+  <button class="login-btn" (click)="toLoginPage()">Login</button>
+  <button class="register-btn"  (click)="toRegisterPage()" routerLink="/registration"> Register </button>
+</div>
+
+
+
+<!-- <button></button> <a routerLink="/login">  </a>|| <a routerLink="/registration">  </a>  -->
+
+<!-- <app-register></app-register> -->
+
+ <router-outlet></router-outlet> 

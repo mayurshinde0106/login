@@ -1,0 +1,24 @@
+
+<!-- <h3 ><a routerLink="/">Dashboard</a></h3> -->
+
+<div  style="margin-top: 90px;">
+  <h2>Register</h2>
+  <form (ngSubmit)="register()">
+    <div>
+      <label>Name:</label>
+      <input type="text" name="employee.name" [(ngModel)]="employee.name" required>
+    </div>
+    <div>
+      <label>Email:</label>
+      <input type="email" name="employee.email" [(ngModel)]="employee.email" required>
+    </div>
+    <div>
+      <label>Password:</label>
+      <input type="password" name="employee.password" [(ngModel)]="employee.password" required>
+    </div>
+    <div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    <button type="submit">Register</button>
+  </form>
+</div>
+<router-outlet></router-outlet>
